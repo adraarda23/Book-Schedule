@@ -4,7 +4,7 @@
 - **Yazar**: Andrew Hunt, David Thomas
 - **Yayın Yılı**: 2019 (20th Anniversary Edition)
 - **Format**: PDF
-- **Durum**: 📖 Başlandı
+- **Durum**: 📖 Devam Ediyor
 
 ## Özet
 The Pragmatic Programmer, yazılım geliştiricilerin daha iyi, daha pragmatik kod yazmaları için pratik öğütler ve deneyimler sunan klasik bir eserdir. Kitap, yazılım geliştirme sürecinde karşılaşılan zorlukları aşmak için teknik beceriler ve profesyonel tutumlar üzerine odaklanır.
@@ -12,45 +12,45 @@ The Pragmatic Programmer, yazılım geliştiricilerin daha iyi, daha pragmatik k
 ## Ana Konular
 
 ### 1. A Pragmatic Philosophy
-- [ ] The Cat Ate My Source Code
-- [ ] Software Entropy
-- [ ] Stone Soup and Boiled Frogs
-- [ ] Good-Enough Software
-- [ ] Your Knowledge Portfolio
-- [ ] Communicate!
+- [x] The Cat Ate My Source Code
+- [x] Software Entropy
+- [x] Stone Soup and Boiled Frogs
+- [x] Good-Enough Software
+- [x] Your Knowledge Portfolio
+- [x] Communicate!
 
 ### 2. A Pragmatic Approach
-- [ ] The Essence of Good Design (ETC)
-- [ ] DRY—The Evils of Duplication
-- [ ] Orthogonality
-- [ ] Reversibility
-- [ ] Tracer Bullets
-- [ ] Prototypes and Post-it Notes
-- [ ] Domain Languages
-- [ ] Estimating
+- [x] The Essence of Good Design (ETC)
+- [x] DRY—The Evils of Duplication
+- [x] Orthogonality
+- [x] Reversibility
+- [x] Tracer Bullets
+- [x] Prototypes and Post-it Notes
+- [x] Domain Languages
+- [x] Estimating
 
 ### 3. The Basic Tools
-- [ ] The Power of Plain Text
-- [ ] Shell Games
-- [ ] Power Editing
-- [ ] Version Control
-- [ ] Debugging
-- [ ] Text Manipulation
-- [ ] Engineering Daybooks
+- [x] The Power of Plain Text
+- [x] Shell Games
+- [x] Power Editing
+- [x] Version Control
+- [x] Debugging
+- [x] Text Manipulation
+- [x] Engineering Daybooks
 
 ### 4. Pragmatic Paranoia
-- [ ] Design by Contract
-- [ ] Dead Programs Tell No Lies
-- [ ] Assertive Programming
-- [ ] How to Balance Resources
-- [ ] Don't Outrun Your Headlights
+- [x] Design by Contract
+- [x] Dead Programs Tell No Lies
+- [x] Assertive Programming
+- [x] How to Balance Resources
+- [x] Don't Outrun Your Headlights
 
 ### 5. Bend, or Break
-- [ ] Decoupling
-- [ ] Juggling the Real World
-- [ ] Transforming Programming
-- [ ] Inheritance Tax
-- [ ] Configuration
+- [x] Decoupling
+- [x] Juggling the Real World
+- [x] Transforming Programming
+- [x] Inheritance Tax
+- [x] Configuration
 
 ### 6. Concurrency
 - [ ] Breaking Temporal Coupling
@@ -82,22 +82,30 @@ The Pragmatic Programmer, yazılım geliştiricilerin daha iyi, daha pragmatik k
 - [ ] Pride and Prejudice
 
 ## Okuma Planı
+
 ### Başlangıç Tarihi
 13 Ocak 2026
 
 ### Bitiş Tarihi (Hedef)
-[Hedef tarih belirlenecek]
+28 Şubat 2026
 
 ### İlerleme
 - [x] Başlangıç
-- [ ] %25 tamamlandı
-- [ ] %50 tamamlandı
+- [x] %25 tamamlandı
+- [x] %50 tamamlandı
 - [ ] %75 tamamlandı
 - [ ] ✅ Tamamlandı
 
 ## Notlar
+
 ### Önemli Alıntılar
-[Kitaptan önemli alıntılar buraya eklenecek]
+> "You Can't Write Perfect Software. Did that hurt? It shouldn't."
+
+> "Don't Live with Broken Windows."
+
+> "DRY: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
+
+> "Eliminate Effects Between Unrelated Things" (Orthogonality)
 
 ### Kişisel Çıkarımlar
 [Kişisel notlar ve çıkarımlar buraya eklenecek]
