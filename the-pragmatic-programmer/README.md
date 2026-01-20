@@ -4,7 +4,7 @@
 - **Yazar**: Andrew Hunt, David Thomas
 - **Yayın Yılı**: 2019 (20th Anniversary Edition)
 - **Format**: PDF
-- **Durum**: 📖 Devam Ediyor
+- **Durum**: ✅ Tamamlandı
 
 ## Özet
 The Pragmatic Programmer, yazılım geliştiricilerin daha iyi, daha pragmatik kod yazmaları için pratik öğütler ve deneyimler sunan klasik bir eserdir. Kitap, yazılım geliştirme sürecinde karşılaşılan zorlukları aşmak için teknik beceriler ve profesyonel tutumlar üzerine odaklanır.
@@ -53,48 +53,48 @@ The Pragmatic Programmer, yazılım geliştiricilerin daha iyi, daha pragmatik k
 - [x] Configuration
 
 ### 6. Concurrency
-- [ ] Breaking Temporal Coupling
-- [ ] Shared State Is Incorrect State
-- [ ] Actors and Processes
-- [ ] Blackboards
+- [x] Breaking Temporal Coupling
+- [x] Shared State Is Incorrect State
+- [x] Actors and Processes
+- [x] Blackboards
 
 ### 7. While You Are Coding
-- [ ] Listen to Your Lizard Brain
-- [ ] Programming by Coincidence
-- [ ] Algorithm Speed
-- [ ] Refactoring
-- [ ] Test to Code
-- [ ] Property-Based Testing
-- [ ] Stay Safe Out There
-- [ ] Naming Things
+- [x] Listen to Your Lizard Brain
+- [x] Programming by Coincidence
+- [x] Algorithm Speed
+- [x] Refactoring
+- [x] Test to Code
+- [x] Property-Based Testing
+- [x] Stay Safe Out There
+- [x] Naming Things
 
 ### 8. Before the Project
-- [ ] The Requirements Pit
-- [ ] Solving Impossible Puzzles
-- [ ] Working Together
-- [ ] The Essence of Agility
+- [x] The Requirements Pit
+- [x] Solving Impossible Puzzles
+- [x] Working Together
+- [x] The Essence of Agility
 
 ### 9. Pragmatic Projects
-- [ ] Pragmatic Teams
-- [ ] Coconuts Don't Cut It
-- [ ] Pragmatic Starter Kit
-- [ ] Delight Your Users
-- [ ] Pride and Prejudice
+- [x] Pragmatic Teams
+- [x] Coconuts Don't Cut It
+- [x] Pragmatic Starter Kit
+- [x] Delight Your Users
+- [x] Pride and Prejudice
 
 ## Okuma Planı
 
 ### Başlangıç Tarihi
 13 Ocak 2026
 
-### Bitiş Tarihi (Hedef)
-28 Şubat 2026
+### Bitiş Tarihi
+20 Ocak 2026
 
 ### İlerleme
 - [x] Başlangıç
 - [x] %25 tamamlandı
 - [x] %50 tamamlandı
-- [ ] %75 tamamlandı
-- [ ] ✅ Tamamlandı
+- [x] %75 tamamlandı
+- [x] ✅ Tamamlandı
 
 ## Notlar
 
@@ -108,15 +108,15 @@ The Pragmatic Programmer, yazılım geliştiricilerin daha iyi, daha pragmatik k
 > "Eliminate Effects Between Unrelated Things" (Orthogonality)
 
 ### Kişisel Çıkarımlar
-[Kişisel notlar ve çıkarımlar buraya eklenecek]
+Kitap, yazılım sektörünün genel prensiplerini kapsamlı bir şekilde ele almaktadır. Ancak içerik temelde kalmış olup, daha derinlemesine konuların diğer uzmanlaşmış kaynaklarla desteklenmesi gerekmektedir. Daha önce edindiğim bilgilerin pekiştirilmesi açısından faydalı oldu, ancak yeni bir bilgi edinimine katkı sağlamadı. Temel seviyedeki geliştiriciler için sağlam bir temel oluşturmakta, ancak deneyimli geliştiriciler için tekrar niteliği taşımaktadır.
 
 ## Uygulamalar
-[Bu kitaptan öğrenilenlerle yapılan pratik uygulamalar buraya eklenecek]
+Kitapta ele alınan konseptler halihazırda uyguladığım pratikler olduğundan, yeni bir uygulama geliştirme ihtiyacı doğmamıştır. Mevcut bilgilerimin tekrarı ve pekiştirilmesi şeklinde değerlendirilebilir.
 
 ## İlgili Kaynaklar
-- [İlgili kaynaklar ve linkler]
+Kitap epub formatında okunmuştur.
 
 ## Değerlendirme
-- **Öğrenme Değeri**: ⭐⭐⭐⭐⭐ [Puanlama]
-- **Okunabilirlik**: ⭐⭐⭐⭐⭐ [Puanlama]
-- **Tavsiye Edilir mi**: [Evet/Hayır ve neden]
+- **Öğrenme Değeri**: ⭐⭐⭐⭐
+- **Okunabilirlik**: ⭐⭐
+- **Tavsiye Edilir mi**: Evet, ancak özellikle kariyerine yeni başlayan veya yazılım geliştirme prensiplerini öğrenmek isteyen başlangıç seviyesindeki geliştiriciler için tavsiye edilir. Deneyimli geliştiriciler için bilgi tazeleme amaçlı okunabilir.
