@@ -31,10 +31,10 @@ Kent Beck'in yazılım geliştirmede test-driven development (TDD) metodolojisin
 
 ## Okuma Planı
 ### Başlangıç Tarihi
-[Tarih]
+20 Ocak 2026
 
 ### Bitiş Tarihi (Hedef)
-[Tarih]
+26 Ocak 2026
 
 ### İlerleme
 - [x] Başlangıç
