@@ -4,7 +4,7 @@
 - **Yazar**: Martin Kleppmann
 - **Yayın Yılı**: 2017 (O'Reilly Media)
 - **Format**: PDF/EPUB
-- **Durum**: 📖 Devam Ediyor (~%75 tamamlandı)
+- **Durum**: ✅ Tamamlandı
 
 ## Özet
 Martin Kleppmann'ın modern veri sistemlerinin tasarım prensiplerini derinlemesine ele aldığı, yazılım mühendisliği alanının en önemli referans kitaplarından biri. Veritabanları, dağıtık sistemler, replication, partitioning, transaction'lar, consensus algoritmaları ve veri yoğun uygulamaların tasarımı gibi kritik konuları akademik titizlikle, fakat pratik örneklerle birlikte sunuyor. "Tek bir doğru çözüm yoktur, sadece trade-off'lar vardır" yaklaşımıyla mühendislik perspektifi kazandırıyor.
@@ -21,7 +21,7 @@ Martin Kleppmann'ın modern veri sistemlerinin tasarım prensiplerini derinlemes
   - Transactions
   - The Trouble with Distributed Systems
   - Consistency and Consensus
-- [ ] **Part III: Derived Data** (Bölüm 10-12) — *Devam ediyor*
+- [x] **Part III: Derived Data** (Bölüm 10-12)
   - Batch Processing
   - Stream Processing
   - The Future of Data Systems
@@ -33,12 +33,15 @@ Martin Kleppmann'ın modern veri sistemlerinin tasarım prensiplerini derinlemes
 ### Bitiş Tarihi (Hedef)
 Mayıs 2026
 
+### Gerçek Bitiş Tarihi
+Ağustos 2026 — *Part III (Derived Data) planlanandan geç tamamlandı; batch/stream processing bölümleri beklediğimden yoğun çıktı.*
+
 ### İlerleme
 - [x] Başlangıç
 - [x] %25 tamamlandı
 - [x] %50 tamamlandı
 - [x] %75 tamamlandı
-- [ ] ✅ Tamamlandı
+- [x] ✅ Tamamlandı
 
 ## Bölümler ve Notlar
 
@@ -162,16 +165,30 @@ Bu bölüm dağıtık sistemlerle ilgili tüm yanılgıları yıkıyor:
 
 ---
 
-### Part III: Derived Data — *(Henüz okunmadı)*
+### Part III: Derived Data
 
-#### Chapter 10: Batch Processing — *Bekliyor*
-MapReduce, Hadoop, dataflow engine'ler (Spark, Flink, Tez).
+Bölümün omurgası **system of record** (source of truth) ile **derived data** (cache, index, materialized view — kaybolursa yeniden üretilebilir) ayrımı.
 
-#### Chapter 11: Stream Processing — *Bekliyor*
-Event sourcing, change data capture, Kafka, stream-stream/stream-table joins.
+#### Chapter 10: Batch Processing
+- **Unix felsefesi → MapReduce**: Immutable input, ayrı output, composable araçlar. MapReduce'un asıl işi aradaki distributed sort/shuffle.
+- **Join stratejileri**: Reduce-side (sort-merge, skew problemi) vs. map-side (broadcast hash join, partitioned hash join).
+- **Immutable input'un değeri**: Job'u tekrar çalıştırmak güvenli → "human fault tolerance", hatalı deploy'dan geri dönebilme.
+- **Dataflow engine'ler** (Spark, Tez, Flink): Tüm işi tek DAG olarak modelleme, intermediate state'i HDFS'e materialize etmeme, lineage ile recovery.
 
-#### Chapter 12: The Future of Data Systems — *Bekliyor*
-Unbundling databases, dataflow architectures, end-to-end argument.
+#### Chapter 11: Stream Processing
+- **Broker türleri**: AMQP/JMS tarzı (mesaj consume edilince silinir, redelivery sırayı bozar) vs. log-based (Kafka — offset, replay, sıra garantisi).
+- **Dual write problemi** ve çözümü: CDC (WAL/binlog → stream) ve **event sourcing**. Command reddedilebilir, event olmuş bitmiştir.
+- **Event time vs. processing time**: Consumer geride kalıp sonra yetiştiğinde processing time'a göre pencereleme tamamen yanlış metrik üretiyor. Watermark, straggler event'ler.
+- **Join'ler**: stream-stream (window), stream-table (enrichment), table-table (materialized view). Join'ler zamana bağımlı — aynı sorgu farklı zamanda farklı sonuç verebiliyor.
+- **"Exactly-once" aslında effectively-once**: Checkpoint iç state'i kurtarır, dış yan etkiler için idempotence şart.
+
+#### Chapter 12: The Future of Data Systems
+- **Data integration**: "En iyi veritabanı" yok; asıl problem RDBMS + index + cache + warehouse'u tutarlı tutmak. Çözüm: total order log'u source of truth yapıp geri kalanı türetmek.
+- **Lambda architecture eleştirisi**: Aynı mantığı iki kez yazmak yerine log replay ile batch/stream'i birleştirmek.
+- **Unbundling the database**: Storage, index, replication, materialized view'ı sistem seviyesinde ayrıştırıp dataflow ile bağlamak. Uygulama kodu bir "derivation function".
+- **End-to-end argument**: Transaction veya "exactly-once" altyapısı uygulama seviyesindeki duplicate submit'i çözmez; doğruluk uçtan uca bir sorumluluk (operation ID + idempotence).
+- **Timeliness vs. Integrity**: Timeliness geçici bozulur ve düzelir, **integrity ihlali kalıcı hasardır**. Çoğu iş kolu eventual consistency'yi kaldırır, veri kaybını kaldıramaz.
+- **Doing the Right Thing**: Predictive analytics'te önyargı, feedback loop'lar, gözetim ve consent. Teknik bir kitabın etikle bitmesi tesadüf değil.
 
 ---
 
@@ -183,6 +200,7 @@ Unbundling databases, dataflow architectures, end-to-end argument.
 - "Consistency is a confusingly overloaded term." (Linearizability vs. ACID consistency vs. consistent hashing)
 - "It is better to have unreliable hardware and tolerate failures in software than to make hardware highly reliable."
 - "In a distributed system, it doesn't matter what time it 'really' is — what matters is the order of events."
+- "Violations of timeliness are 'eventual consistency,' whereas violations of integrity are 'perpetual inconsistency.'"
 
 ### Kişisel Çıkarımlar
 Bu kitap kariyerimi en çok etkileyen kaynaklardan biri oldu. DDIA'yı okumadan önce veritabanlarına "magic box" gibi bakıyordum — sorgu atılır, sonuç gelir. Şimdi B-tree ile LSM-tree arasındaki write amplification trade-off'unu, MVCC'nin nasıl çalıştığını, neden Postgres'te VACUUM gerekli olduğunu, replication lag'in neden bazı garantileri bozduğunu kavradım.
@@ -192,6 +210,7 @@ Bu kitap kariyerimi en çok etkileyen kaynaklardan biri oldu. DDIA'yı okumadan 
 2. **Chapter 7 (Transactions)**: Isolation level'larının her birinin gerçekten neyi koruyup neyi korumadığı. Write skew gibi sinsi anomaliler.
 3. **Chapter 8 (Distributed Systems Troubles)**: Bu bölüm beni distributed systems konusunda sağlıklı bir paranoyaya soktu. Network, clock, process pause — hiçbiri güvenilir değil.
 4. **Chapter 9 (Consensus)**: Raft ve Paxos'un neden var olduğunu, ZooKeeper'ın neden production'da bu kadar yaygın olduğunu anlamak.
+5. **Chapter 11-12 (Stream Processing & Future)**: Event time / processing time ayrımı ve timeliness ile integrity'nin farklı şeyler olduğu fikri — sistem tasarımına bakışımı en çok değiştiren iki kavram.
 
 **Genel Çıkarımlar**:
 - "Database choice" diye bir karar yok; gerçek karar **trade-off seçimi**.
